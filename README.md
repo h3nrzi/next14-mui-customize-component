@@ -47,8 +47,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 The theme for Material UI can be customized by modifying the `theme.js` file located in the `styles` directory. Refer to the [Material UI documentation](https://material-ui.com/customization/theming/) for more information on customizing themes.
 
 ## Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests.
+- Contributions are welcome! Feel free to submit issues or pull requests.
 ---
 
 Feel free to customize this template according to your project's specific details and requirements.
