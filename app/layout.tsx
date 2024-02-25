@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import localFont from 'next/font/local';
-const iranSans = localFont({ src: '../public/iranSans.ttf' });
+
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '@/app/theme/theme';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -11,7 +13,13 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <html lang="en" dir="rtl">
-      <body className={iranSans.className}>{children}</body>
+      <AppRouterCacheProvider>
+        <ThemeProvider theme={theme}>
+          <body>
+            <main>{children}</main>
+          </body>
+        </ThemeProvider>
+      </AppRouterCacheProvider>
     </html>
   );
 };
